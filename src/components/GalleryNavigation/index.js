@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
+import './GalleryNavigation.css'
 
 const GalleryNavigation = ({ data }) => {
-
-    console.log(data)
-    
-    const galleryItems = data.map((gallery) => <NavLink key={gallery.id} to={`/galleries/:${gallery.id}`}>Hello from {gallery.id}</NavLink>);
+    const galleryItems = data.map((gallery) => <NavLink key={gallery.id} to={`/galleries/${gallery.id}`}>{gallery.id} </NavLink>);
 
     return (
         <nav>
