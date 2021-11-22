@@ -19,6 +19,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/galleries/:galleryId" element={<GalleryView data={harvardArt.records} />} />
+            <Route 
+              path="*" 
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Page Not Found</p>
+                </main>
+              }
+            />
           </Routes>
       </div>
   );
