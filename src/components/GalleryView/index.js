@@ -7,12 +7,16 @@ const GalleryView = ({ data }) => {
 
     const currentGallery = data.find((gallery) => gallery.id === parseInt(galleryId))
 
-    const art = data.map((gallery) => currentGallery.objects)
+    const artObject = currentGallery.objects
+
+    const allArt = artObject.map((artItem) => {
+        return (<ArtImageTile artDisplay={artItem.images[0]} />);
+    })
 
     return (
         <div> 
             <h2>{currentGallery.name}</h2>
-            <ArtImageTile art={art}/>
+            {allArt}
         </div>
     );
 };
