@@ -10,7 +10,7 @@ const GalleryView = ({ data }) => {
     const artObject = currentGallery.objects
 
     const allArt = artObject.map((artItem) => {
-        return (<ArtImageTile artDisplay={artItem.images[0]} />);
+        return (<ArtImageTile key={artItem.id} artDisplay={artItem} />);
     })
 
     return (

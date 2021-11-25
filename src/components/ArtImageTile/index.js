@@ -6,8 +6,8 @@ const ArtImageTile = ({ artDisplay }) => {
     
     return (
         <div>
-        <Link to={`/galleries/${galleryId}/art/${artDisplay.imageid}`}>
-            <img src={artDisplay.baseimageurl} alt="" width="500"/>
+        <Link to={`/galleries/${galleryId}/art/${artDisplay.id}`}>
+            <img src={artDisplay.primaryimageurl} alt="" width="500"/>
         </Link>
         </div>
 
