@@ -18,7 +18,7 @@ function App() {
           <GalleryNavigation data={harvardArt.records} />
           <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/galleries/:galleryId/*" element={<GalleryView data={harvardArt.records} />} />
+            <Route path="galleries/:galleryId/*" element={<GalleryView data={harvardArt.records} />} />
             <Route 
               path="*" 
               element={

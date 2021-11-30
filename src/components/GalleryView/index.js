@@ -1,22 +1,25 @@
-import { useParams } from "react-router";
+import { useParams, Routes, Route } from "react-router";
 import ArtImageTile from "../ArtImageTile";
+import ArtDescription from "../ArtDescription";
 
 const GalleryView = ({ data }) => {
-    const params = useParams();
-    const { galleryId } = params;
+    const { galleryId } = useParams();
 
     const currentGallery = data.find((gallery) => gallery.id === parseInt(galleryId))
 
-    const artObject = currentGallery.objects
+    const artObjects = currentGallery.objects
 
-    const allArt = artObject.map((artItem) => {
+    const allArt = artObjects.map((artItem) => {
         return (<ArtImageTile key={artItem.id} artDisplay={artItem} />);
     })
 
     return (
         <div> 
             <h2>{currentGallery.name}</h2>
-            {allArt}
+            <Routes>
+                <Route path="/" element={allArt} />
+                <Route path="/art/:artId" element={<ArtDescription artObject={artObjects}/>}/>
+            </Routes>
         </div>
     );
 };
