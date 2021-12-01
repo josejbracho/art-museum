@@ -18,7 +18,7 @@ const GalleryView = ({ data }) => {
             <h2>{currentGallery.name}</h2>
             <Routes>
                 <Route path="/" element={allArt} />
-                <Route path="/art/:artId" element={<ArtDescription artObject={artObjects}/>}/>
+                <Route path="/art/:artId" element={<ArtDescription props={artObjects}/>}/>
             </Routes>
         </div>
     );

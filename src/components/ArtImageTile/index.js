@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 const ArtImageTile = ({ artDisplay }) => {
     const { galleryId } = useParams();
 
+    // Gallery 2340 doesn't work because it has an art with no image path for .images[0], must find a way to give alternative path
+    
     return (
         <div>
         <Link to={`/galleries/${galleryId}/art/${artDisplay.images[0].imageid}`}>
