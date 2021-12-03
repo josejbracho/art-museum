@@ -8673,7 +8673,25 @@ const harvardArt = {
      "id": 227784,
      "verificationleveldescription": "Best. Object is extensively researched, well described and information is vetted",
      "period": null,
-     "images": [],
+     "images": [
+        {
+        "date": null,
+        "copyright": null,
+        "imageid": 20682,
+        "idsid": null,
+        "format": "image/jpeg",
+        "description": null,
+        "technique": null,
+        "renditionnumber": null,
+        "displayorder": 1,
+        "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:VRS49136_dynmc",
+        "alttext": null,
+        "width": 1024,
+        "publiccaption": null,
+        "iiifbaseuri": "null",
+        "height": 478
+         }
+        ],
      "worktypes": [
       {
        "worktypeid": "401",
